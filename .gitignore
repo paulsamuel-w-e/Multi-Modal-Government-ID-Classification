@@ -1,0 +1,19 @@
+# Excluding Environment
+env/
+
+# Untracking Data
+Data/
+
+# temp trainer
+tmp_trainer/
+
+checkpoints/
+
+sanjesh/
+
+saved_model/
+
+results/
+
+pipeline/__pycache__/
+src/__pycache__/

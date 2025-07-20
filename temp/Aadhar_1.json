@@ -1,0 +1,51 @@
+{
+    "id": "Aadhar_1",
+    "image_path": "./Data/raw_images/Aadhar/Aadhar_1.jpg",
+    "full_text": "GOVERNMENTOF INDIA Riteish Vilasrao Deshmukh oaYoB:1977 g Male 217312964875",
+    "words": [
+        "GOVERNMENTOF INDIA",
+        "Riteish Vilasrao Deshmukh",
+        "oaYoB:1977",
+        "g Male",
+        "217312964875"
+    ],
+    "bbox": [
+        [
+            179,
+            42,
+            361,
+            62
+        ],
+        [
+            154,
+            116,
+            360,
+            138
+        ],
+        [
+            154,
+            141,
+            296,
+            162
+        ],
+        [
+            156,
+            166,
+            237,
+            195
+        ],
+        [
+            170,
+            278,
+            311,
+            299
+        ]
+    ],
+    "confidence": [
+        0.9669682383537292,
+        0.9537506699562073,
+        0.8231355547904968,
+        0.8633198738098145,
+        0.9989519119262695
+    ]
+}
