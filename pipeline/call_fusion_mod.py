@@ -1,5 +1,7 @@
 import torch
 import json
+import glob
+import os
 from PIL import Image
 from transformers import BertTokenizer, BertModel
 from torchvision import models, transforms
@@ -72,10 +74,15 @@ def predict_from_json(json_path, model_path="checkpoints/final_fusion_model.pt",
         pred = torch.argmax(logits, dim=1).item()
         pred_label = id2label[pred]
 
-    print(f"\n📄 Prediction for: {image_path}")
-    print(f"✅ Predicted Class: {pred_label}")
+    result = {
+        "file": image_path,
+        "predicted_label": pred_label
+    }
+    print(json.dumps(result))
 
 # --- Example usage ---
 if __name__ == "__main__":
-    json_path = "./temp/Aadhar_1.json"
-    predict_from_json(json_path)
+    temp_dir = "temp"
+    json_paths = glob.glob(os.path.join(temp_dir, "*"))
+    for jsn in json_paths:
+        predict_from_json(jsn)

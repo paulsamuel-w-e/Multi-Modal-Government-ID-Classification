@@ -1,8 +1,10 @@
-# src/single_ocr_and_clean.py
+# src/extract_ocr.py
 import os
 import gc
+import glob
 import simplejson
 import re
+import paddle
 from pipeline.preload import CTX
 
 def polygon_to_rect(polygon):
@@ -92,21 +94,18 @@ def extract_ocr_single_image(image_path):
 
 # --- Main flow ---
 if __name__ == "__main__":
-    image_path = "./Data/raw_images/Aadhar/Aadhar_1.jpg"
+    upload_dir = "uploads"
+    image_paths = glob.glob(os.path.join(upload_dir, "*"))
 
-    raw_doc = extract_ocr_single_image(image_path)
-    if raw_doc:
-        cleaned_doc = clean_ocr_output(raw_doc)
+    for image_path in image_paths:
+        raw_doc = extract_ocr_single_image(image_path)
+        if raw_doc:
+            cleaned_doc = clean_ocr_output(raw_doc)
 
-        # Create output directory if it doesn't exist
-        os.makedirs("temp", exist_ok=True)
+            os.makedirs("temp", exist_ok=True)
+            output_path = os.path.join("temp", f"{cleaned_doc['id']}.json")
 
-        # Create output file path
-        output_path = os.path.join("temp", f"{cleaned_doc['id']}.json")
+            with open(output_path, "w", encoding="utf-8") as f:
+                simplejson.dump(cleaned_doc, f, ensure_ascii=False, indent=4)
 
-        # Save to JSON
-        with open(output_path, "w", encoding="utf-8") as f:
-            simplejson.dump(cleaned_doc, f, ensure_ascii=False, indent=4)
-
-        print(f"Saved cleaned OCR result to {output_path}")
-        print(simplejson.dumps(cleaned_doc, ensure_ascii=False, indent=4))
+            print(simplejson.dumps(cleaned_doc, ensure_ascii=False, indent=4))

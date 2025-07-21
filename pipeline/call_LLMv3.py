@@ -1,5 +1,7 @@
 # src/predict_single_image.py
 
+import os
+import glob
 import torch
 import simplejson as json
 from PIL import Image
@@ -43,13 +45,24 @@ def predict_layoutlmv3(image_path, json_path, model_dir="./saved_model"):
     id2label = model.config.id2label
     label = id2label[predicted_class]
 
-    print(f"\n📄 Prediction for: {image_path}")
-    print(f"✅ Predicted Class: {label}")
+    result = {
+        "file": image_path,
+        "predicted_label": label
+    }
+    print(json.dumps(result))
 
     return label
 
 # --- Main ---
 if __name__ == "__main__":
-    image_path = "./Data/raw_images/Aadhar/Aadhar_1.jpg"
-    json_path = "./temp/Aadhar_1.json"
-    predict_layoutlmv3(image_path, json_path)
+    upload_dir = "uploads"
+    image_paths = glob.glob(os.path.join(upload_dir, "*"))
+
+    for image_path in image_paths:
+        base_name = os.path.splitext(os.path.basename(image_path))[0]
+        json_path = os.path.join("temp", f"{base_name}.json")
+
+        if os.path.exists(json_path):
+            predict_layoutlmv3(image_path, json_path)
+        else:
+            print(f"⚠️ Skipping {image_path} — No corresponding JSON found at {json_path}")

@@ -80,13 +80,13 @@ class DatasetLoader:
             "test": test_dataset
         })
 
-        print("Column names:", dataset["train"].column_names)
+        #print("Column names:", dataset["train"].column_names)
 
         self.label2id = {label: i for i, label in enumerate(sorted(set(dataset["train"]["label"])))}
         self.id2label = {i: label for label, i in self.label2id.items()}
 
         sample = dataset["train"][0]
-        print("Sample keys:", sample.keys())
+        #print("Sample keys:", sample.keys())
         if not raw:
             self._preprocess(sample)
 
@@ -108,7 +108,7 @@ class DatasetLoader:
 
         test_dataset = Dataset.from_parquet(str(test_path))
 
-        print("Test dataset column names:", test_dataset.column_names)
+        #print("Test dataset column names:", test_dataset.column_names)
 
         if label2id is not None:
             self.label2id = label2id
@@ -117,7 +117,7 @@ class DatasetLoader:
         self.id2label = {i: label for label, i in self.label2id.items()}
 
         sample = test_dataset[0]
-        print("Test sample keys:", sample.keys())
+        #print("Test sample keys:", sample.keys())
         if not raw:
             self._preprocess(sample)
 
@@ -146,5 +146,5 @@ class DatasetLoader:
             output_path = Path(output_dir) / f"{split}_dataset.json"
             with open(output_path, 'w') as f:
                 json.dump(data[split], f, indent=2)
-            print(f"✅ Exported {split} dataset to {output_path}")
+            #print(f"✅ Exported {split} dataset to {output_path}")
         return data, label2id, id2label
