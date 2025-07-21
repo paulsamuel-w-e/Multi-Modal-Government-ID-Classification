@@ -1,7 +1,10 @@
+#api/ocr_api.py
+
 from fastapi import APIRouter, UploadFile, File
 import subprocess
 import os
 from config import OCR_PYTHON
+from pipeline.utility import clear_folder_contents
 
 router = APIRouter()
 
@@ -24,6 +27,9 @@ async def run_ocr(image: UploadFile = File(...)):
         capture_output=True,
         text=True
     )
+
+    clear_folder_contents("uploads")
+    clear_folder_contents("temp")
 
     return {
         "message": "OCR done",

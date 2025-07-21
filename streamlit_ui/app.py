@@ -1,5 +1,8 @@
+#streamlit_ui/app.py
+
 import streamlit as st
 import requests
+import sys
 
 API_BASE = "http://localhost:8000/api"
 
@@ -15,14 +18,23 @@ if uploaded_file:
 
     if st.button("Run Prediction"):
         with st.spinner("Calling API and running model..."):
-            files = {"image": uploaded_file.getvalue()}
+            # Prepare the correct files payload
+            files = {"image": (uploaded_file.name, uploaded_file.getvalue(), uploaded_file.type)}
 
             if model_choice == "OCR":
-                response = requests.post(f"{API_BASE}/ocr", files={"image": (uploaded_file.name, uploaded_file, "image/jpeg")})
+                response = requests.post(f"{API_BASE}/ocr", files=files)
+
             elif model_choice == "LayoutLMv3":
-                response = requests.post(f"{API_BASE}/layoutlm")
+                # First call OCR (required preprocessing)
+                requests.post(f"{API_BASE}/ocr", files=files)
+                sys.stdout.flush()
+                # Then call LayoutLMv3 with the same file
+                response = requests.post(f"{API_BASE}/layoutlm", files=files)
+
             elif model_choice == "Fusion":
-                response = requests.post(f"{API_BASE}/fusion")
+                requests.post(f"{API_BASE}/ocr", files=files)
+                sys.stdout.flush()
+                response = requests.post(f"{API_BASE}/fusion", files=files)
 
             if response.status_code == 200:
                 st.success("Prediction Complete ✅")

@@ -1,7 +1,10 @@
+# api/fusion_api.py
+
 from fastapi import APIRouter
 import subprocess
 import json
 from config import HV_PYTHON
+from pipeline.utility import clear_folder_contents
 
 router = APIRouter()
 
@@ -23,6 +26,9 @@ async def run_fusion():
             parsed = json.loads(stdout)
         except json.JSONDecodeError:
             parsed = {"raw_output": stdout}
+
+        clear_folder_contents("uploads")
+        clear_folder_contents("temp")
 
         return {
             "message": "Fusion model prediction done",
