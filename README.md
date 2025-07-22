@@ -14,19 +14,19 @@ An end-to-end multimodal system to classify scanned documents (IDs, receipts, li
 
 ## ⏰ Table of Contents
 
-* [Features](##Features)
-* [System Requirements](#system-requirements)
-* [Getting Started](#getting-started)
-* [Architecture](#architecture)
-* [OCR Features](#ocr-features)
-* [Environment & Prerequisites](#environment--prerequisites)
-* [File Structure](#file-structure)
-* [Model Details](#model-details)
-* [How to Run](#how-to-run)
-* [Packaging as EXE](#packaging-as-exe)
-* [Future Scope](#future-scope)
-* [License](#license)
-* [Project Slides](#Project-Slides)
+* [Features](#-features)
+* [System Requirements](#-system-requirements)
+* [Getting Started](#-getting-started)
+* [OCR Features](#-ocr-features)
+* [Environment & Prerequisites](#️-environment--prerequisites)
+* [Architecture](#-architecture)
+* [File Structure](#-file-structure)
+* [Model Details](#-model-details)
+* [How to Run](#-how-to-run)
+* [Packaging as EXE](#-packaging-as-exe)
+* [Future Scope](#-future-scope)
+* [License](#-license)
+* [Project Slides](#-project-slides)
 
 ---
 
