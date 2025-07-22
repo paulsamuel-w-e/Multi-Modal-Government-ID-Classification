@@ -6,7 +6,7 @@ An end-to-end multimodal system to classify scanned documents (IDs, receipts, li
 
 ## ✨ Demo
 
-| Uploading and Classifying | LayoutLMv3 in Action | Full Pipeline via EXE |
+| OCR in Action | LayoutLMv3 in Action | Early Fusion in Action |
 |:-------------------------:|:--------------------:|:----------------------:|
 | ![](assets/gif/demo_vid_1.gif) | ![](assets/gif/demo_vid_2.gif) | ![](assets/gif/demo_vid_3.gif) |
 
