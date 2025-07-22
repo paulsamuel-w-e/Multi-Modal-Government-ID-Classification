@@ -294,8 +294,6 @@ MIT License
   <img src="assets/pics/Slide17.PNG" width="400"/>
   <img src="assets/pics/Slide18.PNG" width="400"/>
   <img src="assets/pics/Slide19.PNG" width="400"/>
-  <img src="assets/pics/Slide20.PNG" width="400"/>
-  <img src="assets/pics/Slide21.PNG" width="400"/>
 </div>
 
 
