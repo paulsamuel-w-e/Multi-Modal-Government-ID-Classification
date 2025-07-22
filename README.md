@@ -277,7 +277,7 @@ MIT License
 
 <h2>📸 Project Slides</h2>
 
-<div style="display: flex; overflow-x: auto; gap: 10px;">
+<div align="center" style="display: flex; justify-content: center; overflow-x: auto; gap: 10px;">
   <img src="assets/pics/Slide4.PNG" width="400"/>
   <img src="assets/pics/Slide5.PNG" width="400"/>
   <img src="assets/pics/Slide6.PNG" width="400"/>
