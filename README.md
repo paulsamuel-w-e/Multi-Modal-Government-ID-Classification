@@ -6,8 +6,14 @@ An end-to-end multimodal system to classify scanned documents (IDs, receipts, li
 
 ## ✨ Demo
 
-📹 Demo Video:
-`assets/demo_vid.mp4` *(Open locally or embed if GitHub preview supports)*
+**Demo 1: OCR Output**
+![Demo 1](assets/gif/demo_vid_1.gif)
+
+**Demo 2: LayoutLMv3 in Action**
+![Demo 2](assets/gif/demo_vid_2.gif)
+
+**Demo 3: Early Fusion in Action**
+![Demo 3](assets/gif/demo_vid_3.gif)
 
 ---
 
