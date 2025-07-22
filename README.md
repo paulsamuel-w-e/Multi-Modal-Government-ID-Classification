@@ -275,4 +275,28 @@ MIT License
 * Sri Yogesh B A
 * Samritha S
 
+<h2>📸 Project Slides</h2>
+
+<div style="display: flex; overflow-x: auto; gap: 10px;">
+  <img src="assets/pics/Slide4.PNG" width="400"/>
+  <img src="assets/pics/Slide5.PNG" width="400"/>
+  <img src="assets/pics/Slide6.PNG" width="400"/>
+  <img src="assets/pics/Slide7.PNG" width="400"/>
+  <img src="assets/pics/Slide8.PNG" width="400"/>
+  <img src="assets/pics/Slide9.PNG" width="400"/>
+  <img src="assets/pics/Slide10.PNG" width="400"/>
+  <img src="assets/pics/Slide11.PNG" width="400"/>
+  <img src="assets/pics/Slide12.PNG" width="400"/>
+  <img src="assets/pics/Slide13.PNG" width="400"/>
+  <img src="assets/pics/Slide14.PNG" width="400"/>
+  <img src="assets/pics/Slide15.PNG" width="400"/>
+  <img src="assets/pics/Slide16.PNG" width="400"/>
+  <img src="assets/pics/Slide17.PNG" width="400"/>
+  <img src="assets/pics/Slide18.PNG" width="400"/>
+  <img src="assets/pics/Slide19.PNG" width="400"/>
+  <img src="assets/pics/Slide20.PNG" width="400"/>
+  <img src="assets/pics/Slide21.PNG" width="400"/>
+</div>
+
+
 > Project Completed: **July 21, 2025**
