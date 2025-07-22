@@ -26,7 +26,7 @@ An end-to-end multimodal system to classify scanned documents (IDs, receipts, li
 * [Packaging as EXE](#packaging-as-exe)
 * [Future Scope](#future-scope)
 * [License](#license)
-* [Project Slides](<h2>Project Slides)
+* [Project Slides](#Project-Slides)
 
 ---
 
