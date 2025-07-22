@@ -205,7 +205,7 @@ File Descriptions
 
 - **`test_results/`** – Contains `test_pred.csv` used for evaluating or submitting to benchmarks.
 
-- **`DocuSort.exe`** – Final packaged application for Windows — opens both backend and UI in one click.
+- **`DocuSort.exe`** – Shortcut of Final packaged application for Windows — opens both backend and UI in one click.
 
 - **`config.py`** – Centralized config: model name, class labels, thresholds, paths.
 
