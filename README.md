@@ -175,7 +175,6 @@ Add `C:\ProgramData\chocolatey\bin` to PATH if not found.
 ```text
 ├── api/               # FastAPI endpoints
 ├── assets/            # icon, demo video
-├── logs/              # model training logs
 ├── pipeline/          # single image end-to-end pipeline
 ├── requirements/      # env-specific dependencies
 ├── scripts/           # .bat, .ps1, .exe launcher
