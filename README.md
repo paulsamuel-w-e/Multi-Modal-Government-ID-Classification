@@ -189,6 +189,31 @@ Add `C:\ProgramData\chocolatey\bin` to PATH if not found.
 ├── main_fastapi.py
 └── README.md
 ```
+File Descriptions
+
+- **`api/`** – Hosts the FastAPI routes that handle classification requests and serve OCR/model predictions.
+
+- **`pipeline/`** – Integrates OCR and the model to classify a single image end-to-end. Useful for scripting and testing.
+
+- **`src/`** – Main training code: dataset loaders, model architectures (LayoutLMv3, Early Fusion), and utilities.
+
+- **`streamlit_ui/`** – User interface to upload and classify documents via the browser. Shows results in real time.
+
+- **`scripts/`** – Contains `.bat`, `.ps1`, and the `DocuSort.exe` generator for local deployment.
+
+- **`requirements/`** – Separated `.txt` files for installing base, training, or OCR-specific Python dependencies.
+
+- **`test_results/`** – Contains `test_pred.csv` used for evaluating or submitting to benchmarks.
+
+- **`DocuSort.exe`** – Final packaged application for Windows — opens both backend and UI in one click.
+
+- **`config.py`** – Centralized config: model name, class labels, thresholds, paths.
+
+- **`accuracy_plot.png`** – Snapshot of training performance to visually track overfitting/generalization.
+
+- **`check_splits.py`** – Verifies dataset balance across train, val, and test sets.
+
+- **`main_fastapi.py`** – Starts the FastAPI app and defines how endpoints behave.
 
 ---
 
