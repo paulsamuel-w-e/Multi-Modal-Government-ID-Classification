@@ -296,7 +296,7 @@ MIT License
 ## 👥 Contributors
 
 * **Paul Samuel W E** *(LayoutLMv3 fine-tuning, OCR Pipeline, Architecture, Packaging)*
-* **Sanjesh J** *(Early Fusion Model, Evaluation)*
+* **Sanjesh J** *(EDA, Early Fusion Model, Evaluation)*
 * Gayathri R
 * Sri Yogesh B A
 * Samritha S
