@@ -1,4 +1,4 @@
-# 📄 Document Classification System: IDentify.AI
+# 📄 Multi-Model ID classification System: IDentify.AI
 
 An end-to-end multimodal system to classify scanned documents (IDs, receipts, licenses, etc.) using both **image and text features**. The project combines OCR, deep learning models (LayoutLMv3 and a custom Early Fusion model), FastAPI, and Streamlit into a deployable `.exe` app.
 
@@ -33,7 +33,7 @@ An end-to-end multimodal system to classify scanned documents (IDs, receipts, li
 ## 🌟 Features
 
 * OCR-powered extraction using **PaddleOCR**
-* Multimodal document classification using:
+* Multimodal Gov. ID classification using:
 
   * **LayoutLMv3** (text + layout + image)
   * **Custom Early Fusion Model** (BERT + ResNet + Attention)
